@@ -1,14 +1,14 @@
-## Node-Shell
+# Node-Shell
 - Written by: Gerald Lou Berzuela and [Arthur Phung](https://github.com/arthurphung)
 
 Recreate shell functionality using Node.js, nodemon, and the request package
 
-# To run the command:
+## To run the command:
 ```
 nodemon bash.js
 ```
 
-# Available commands:
+## Available commands:
 - pwd: print working directory
 - ls: list files in current directory
 - date: print current date
