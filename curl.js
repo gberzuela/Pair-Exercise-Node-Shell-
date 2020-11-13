@@ -1,4 +1,8 @@
-// curl *link (https://www.google.com)
-// Reads link and returns HTML/CSS in text format
+const request = require('request');
 
-//require('request');
+module.exports.curl = function(link) {
+  request(link, function(error, response, body) {
+    process.stdout.write(body);
+    process.stdout.write("\nprompt > ");
+  })
+}
