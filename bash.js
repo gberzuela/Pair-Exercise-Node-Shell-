@@ -3,6 +3,9 @@ const { ls } = require('./ls');
 const { cat } = require('./cat');
 const { curl } = require('./curl');
 const { date } = require('./date');
+const { head } = require('./head');
+const { tail } = require('./tail');
+const { sort } = require('./sort');
 
 function done(output) {
   process.stdout.write(output);
@@ -30,6 +33,11 @@ process.stdin.on('data', data => {
     curl(done, cmd[1]);
   } else if (cmd[0] === 'echo') {
     done(cmd.slice(1).join(' '));
+  } else if (cmd[0] === 'head') {
+    head(done, cmd[1]);
+  } else if (cmd[0] === 'tail') {
+    tail(done, cmd[1]);
+  } else if (cmd[0] === 'sort') {
+    sort(done, cmd[1]);
   }
 });
-

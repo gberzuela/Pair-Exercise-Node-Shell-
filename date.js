@@ -1,4 +1,4 @@
 module.exports.date = function(callback) {
-  const date = new Date();
-  callback(`${date.toString()}`);
+  const date = new Date;
+  callback(`${date.toUTCString()}`);
 }
